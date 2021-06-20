@@ -9,7 +9,8 @@ namespace exercises
     class Program
     {
         static void Main(string[] args)
-        {
+        { 
+            // this is dummy text.
             Console.WriteLine("enter number between 1 to 10");
             int number = Convert.ToInt32(Console.ReadLine());
             int value = number;

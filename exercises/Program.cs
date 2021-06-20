@@ -55,7 +55,8 @@ namespace exercises
 
             int s;
             int c;
-            
+            int demeritpoints=0;
+
             Console.WriteLine("enter speed limit");
             s = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("enter speed of the car");
@@ -64,19 +65,33 @@ namespace exercises
             {
                 Console.WriteLine("ok");
             }
+            else
+            {
+                int speeddifference = c - s;
+                for (int sd = speeddifference / 5; sd <= speeddifference; sd += 1)
+                {
+                    demeritpoints++;
+                }
+                Console.Write("demerit points:");
+                Console.WriteLine(demeritpoints);
+                if (demeritpoints >= 12)
+                {
+                    Console.WriteLine("your license is suspended");
+                }
+                else
+                {
+                    Console.WriteLine("warning demeritpoints used = {0}", speeddifference / 5);
+                }
+                
+                
+                
+                
 
-           
-            
+                
                     
 
-
-
-
-
-
-
-
-
+              
+            }
         }
     }
 }
